@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{45F95F43-EBB5-4B9E-B7FF-075A5B9AE667}</ProjectGuid>
+    <ProjectGuid>{819C6E86-D29B-47EE-B97C-077CD7406C2E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>StringsHomework</RootNamespace>
-    <AssemblyName>StringsHomework</AssemblyName>
+    <RootNamespace>zad4</RootNamespace>
+    <AssemblyName>zad4</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Zad1.cs" />
+    <Compile Include="zad4.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

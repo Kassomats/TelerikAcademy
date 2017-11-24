@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace StringsHomework
 {
-    class Program
+    class Zad1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("this will be a string homework");
+            string input = Console.ReadLine();
+            char[] array = input.ToCharArray();
+            Array.Reverse(array);
+            Console.WriteLine(array);
         }
     }
 }
