@@ -17,7 +17,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zad.08", "Zad8\Zad.08.cspro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zad.10", "zad10\zad.10.csproj", "{8F1CFCF0-742B-43B4-BF3D-25B822B8406D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zad12", "Zad12\Zad12.csproj", "{C2933AB1-F4FD-4ED2-B17F-73F2FC9FBDE3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zad.12", "Zad12\Zad.12.csproj", "{C2933AB1-F4FD-4ED2-B17F-73F2FC9FBDE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zad.23", "Zad.23\Zad.23.csproj", "{8D84B105-0A11-49B3-91B7-208A83245967}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zad.15", "Zad.15\Zad.15.csproj", "{7F6BC44F-2436-4280-8E3D-9F9142E84FC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{C2933AB1-F4FD-4ED2-B17F-73F2FC9FBDE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2933AB1-F4FD-4ED2-B17F-73F2FC9FBDE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2933AB1-F4FD-4ED2-B17F-73F2FC9FBDE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D84B105-0A11-49B3-91B7-208A83245967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D84B105-0A11-49B3-91B7-208A83245967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D84B105-0A11-49B3-91B7-208A83245967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D84B105-0A11-49B3-91B7-208A83245967}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F6BC44F-2436-4280-8E3D-9F9142E84FC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F6BC44F-2436-4280-8E3D-9F9142E84FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F6BC44F-2436-4280-8E3D-9F9142E84FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F6BC44F-2436-4280-8E3D-9F9142E84FC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
