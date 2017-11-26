@@ -10,7 +10,7 @@ namespace Zad5
     {
         static void Main(string[] args)
         {
-            string text = Console.ReadLine() ;
+            string text = Console.ReadLine();
             StringBuilder changedText = new StringBuilder();
             while (text.IndexOf("<upcase>") != -1)
             {
