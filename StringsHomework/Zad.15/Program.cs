@@ -18,7 +18,6 @@ namespace Zad._15
                 input = input.Remove(0, input.IndexOf("<a href=\"") + 9);
                 string siteSavior = input.Substring(0, input.IndexOf("\""));
                 input = input.Remove(0, input.IndexOf("\"")+2);
-              
                 string commentSavior = input.Substring(0, input.IndexOf("</a>"));
                 fixedText.Append("[").Append(commentSavior).Append("](").Append(siteSavior).Append(")");
                 input = input.Remove(0, input.IndexOf("</a>")+4);
