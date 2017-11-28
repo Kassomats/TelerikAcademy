@@ -4,18 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zad._09
+namespace Problem08NumbersAsArrayv2
 {
-    class SortingArray
+    class Program
     {
         static void Main(string[] args)
         {
-            int a =1234;
-            int b = 1234;
-            int c = a + b;
-            string d = (c.ToString());
-            d = new string(d.ToCharArray().Reverse().ToArray());
-            Console.WriteLine(d);
+            int arraySize = int.Parse(Console.ReadLine());
+            int[] array = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            PrintInAscendingOrder(array);
+        }
+
+        static void PrintInAscendingOrder(int[] array)
+        {
+            Array.Sort(array);
+            Console.Write(array[0]);
+
+            for (int i = 1; i < array.Length; i++)
+            {
+                Console.Write(" " + array[i]);
+            }
+            
 
         }
     }

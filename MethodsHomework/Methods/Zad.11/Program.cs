@@ -24,7 +24,7 @@ namespace Zad._08
             int longerArray = Math.Max(firstArrayHelper.Length, secondArrayHelper.Length);
             for (int i = 0; i < longerArray; i++)
             {
-                sum = remainer;
+                sum = 0;
                 if (i < firstArrayHelper.Length)
                 {
                     sum += firstArrayHelper[i];
@@ -33,8 +33,7 @@ namespace Zad._08
                 {
                     sum += secondArrayHelper[i];
                 }
-                convertedArray.Add(sum % 10);
-                remainer = sum / 10;
+                convertedArray.Add(sum);
             }
             Console.Write(convertedArray[0]);
             for (int i = 1; i < convertedArray.Count; i++)
