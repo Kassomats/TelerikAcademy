@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecretNumberal.01", "SecretNumberal.01\SecretNumberal.01.csproj", "{01B934D5-7CDE-414F-88FD-D33001058CE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoshoCode.04", "GoshoCode.04\GoshoCode.04.csproj", "{FD5D3D75-F6EC-48D3-8F22-F8BDB063CBBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{01B934D5-7CDE-414F-88FD-D33001058CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01B934D5-7CDE-414F-88FD-D33001058CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01B934D5-7CDE-414F-88FD-D33001058CE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD5D3D75-F6EC-48D3-8F22-F8BDB063CBBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD5D3D75-F6EC-48D3-8F22-F8BDB063CBBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD5D3D75-F6EC-48D3-8F22-F8BDB063CBBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD5D3D75-F6EC-48D3-8F22-F8BDB063CBBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

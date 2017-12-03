@@ -14,7 +14,7 @@ namespace SecretNumberal._01
             string[] input = Console.ReadLine().Split(new string[] { ", " }, StringSplitOptions.RemoveEmptyEntries).ToArray();
 
 
-            int[] array = new int[4];
+            BigInteger[] array = new BigInteger[4];
 
 
 
@@ -22,8 +22,6 @@ namespace SecretNumberal._01
             {
                 List<int> firstNumb = new List<int>();
                 string word = input[i];
-                int index = 0;
-
                 while (word.Length > 0)
                 {
                     if (word.IndexOf("hristofor") == 0)
@@ -68,14 +66,14 @@ namespace SecretNumberal._01
                     }
                 }
 
-                array[i] = int.Parse(string.Join("", firstNumb));
+                array[i] = BigInteger.Parse(string.Join("", firstNumb));
             }
             BigInteger product = 1;
 
             for (int i = 0; i < array.Length; i++)
             {
             
-                array[i] = Convert.ToInt32(array[i].ToString(), 8);
+                array[i] = Convert.ToInt64(array[i].ToString(), 8);
                 product *= array[i];
                 
             }
