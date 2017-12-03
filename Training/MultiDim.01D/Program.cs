@@ -29,6 +29,7 @@ namespace MultiDim._01D
                         }
                         else
                         {
+                            col++;
                             dir = "right";
                         }
 
@@ -44,6 +45,7 @@ namespace MultiDim._01D
                         }
                         else
                         {
+                            row--;
                             dir = "up";
                         }
                 }
@@ -51,17 +53,35 @@ namespace MultiDim._01D
                 {
                     for (int i = row-1; i >= 0; i--)
                     {
-                        if (i > 0 && matrix[i-1,col]==0)
+                        if (i > 0 && matrix[i - 1, col] == 0)
                         {
                             row = i;
                             matrix[row, col] = counter++;
+                        }
+                        else
+                        {
+                            col--;
+                            dir = "left";
                         }
 
                     }
                 }
                 else if (dir == "left")
                 {
+                    for (int i = col-1; i >= 0; i--)
+                    {
+                        if (i > 0 && matrix[i - 1, col] == 0)
+                        {
+                            row = i;
+                            matrix[row, col] = counter++;
+                        }
+                        else
+                        {
+                            col--;
+                            dir = "left";
+                        }
 
+                    }
                 }
 
             }
@@ -79,3 +99,69 @@ namespace MultiDim._01D
         }
     }
 }
+
+
+//private static void FillTheMatrixD()
+//{
+//    bool isDown = true;
+//    bool isRight = false;
+//    bool isUp = false;
+//    bool isLeft = false;
+
+//    while (counter <= matrix.GetLength(0) * matrix.GetLength(1))
+//    {
+//        matrix[row, col] = counter++;
+//        if (isDown)
+//        {
+//            if (row + 1 >= matrix.GetLength(0) || matrix[row + 1, col] != 0)
+//            {
+//                col++;
+//                isDown = false;
+//                isRight = true;
+//            }
+//            else
+//            {
+//                row++;
+//            }
+//        }
+//        else if (isRight)
+//        {
+//            if (col + 1 >= matrix.GetLength(1) || matrix[row, col + 1] != 0)
+//            {
+//                row--;
+//                isRight = false;
+//                isUp = true;
+//            }
+//            else
+//            {
+//                col++;
+//            }
+//        }
+//        else if (isUp)
+//        {
+//            if (row - 1 < 0 || matrix[row - 1, col] != 0)
+//            {
+//                col--;
+//                isUp = false;
+//                isLeft = true;
+//            }
+//            else
+//            {
+//                row--;
+//            }
+//        }
+//        else if (isLeft)
+//        {
+//            if (col - 1 < 0 || matrix[row, col - 1] != 0)
+//            {
+//                row++;
+//                isLeft = false;
+//                isDown = true;
+//            }
+//            else
+//            {
+//                col--;
+//            }
+//        }
+//    }
+//}

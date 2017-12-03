@@ -17,6 +17,7 @@ namespace CryptoCS
 
             BigInteger firstNumIn10 = ConvertFrom26(firstNum);
             BigInteger secondNumIn10 = ConvertFrom7(secondNum);
+
             if (subOrAdd == "+")
 
             {
@@ -28,8 +29,6 @@ namespace CryptoCS
                 BigInteger result = firstNumIn10 - secondNumIn10;
                 Console.WriteLine(ConvertTo9(result));
             }
-
-
         }
 
         static BigInteger ConvertFrom7(string num)

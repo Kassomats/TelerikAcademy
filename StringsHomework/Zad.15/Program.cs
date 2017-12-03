@@ -12,15 +12,17 @@ namespace Zad._15
         {
             string input = Console.ReadLine();
             StringBuilder fixedText = new StringBuilder();
-            while (input.IndexOf("<a href=\"") != -1)
+            int counter = 0;
+            while (input.IndexOf("<a href=\"",counter) != -1)
             {
                 fixedText.Append(input.Substring(0, input.IndexOf("<a href=\"")));
                 input = input.Remove(0, input.IndexOf("<a href=\"") + 9);
                 string siteSavior = input.Substring(0, input.IndexOf("\""));
                 input = input.Remove(0, input.IndexOf("\"")+2);
                 string commentSavior = input.Substring(0, input.IndexOf("</a>"));
-                fixedText.Append("[").Append(commentSavior).Append("](").Append(siteSavior).Append(")");
+                fixedText.Append("["+commentSavior+"]("+siteSavior+")");
                 input = input.Remove(0, input.IndexOf("</a>")+4);
+                counter++;
             }
             fixedText.Append(input);
             Console.WriteLine(fixedText);
