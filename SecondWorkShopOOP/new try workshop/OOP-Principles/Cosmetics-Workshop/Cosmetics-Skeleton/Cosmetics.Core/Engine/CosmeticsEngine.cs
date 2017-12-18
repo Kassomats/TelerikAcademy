@@ -264,7 +264,7 @@ namespace Cosmetics.Core.Engine
             var cream = this.factory.CreateCream(creamName, creamBrand, creamPrice, creamGender, creamScent);
             this.products.Add(creamName, (IProduct)cream);
 
-            return string.Format(ShampooCreated, creamName);
+            return string.Format(CreamCreated, creamName);
         }
 
         private string CreateToothpaste(string toothpasteName, string toothpasteBrand, decimal toothpastePrice, GenderType toothpasteGender, IList<string> toothpasteIngredients)

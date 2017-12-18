@@ -24,7 +24,7 @@ namespace Cosmetics.Products
         public UsageType Usage => usage;
         public override string Print()
         {
-            return $"#{Name} {Brand}\r\n # Price: ${Price}\r\n # Gender: {Gender}\r\n # Milliliters: {milliliters}\r\n # Usage: {usage}\r\n ===";
+            return base.Print() + $" # Milliliters: {milliliters}\r\n # Usage: {usage}\r\n ===";
         }
     }
 }

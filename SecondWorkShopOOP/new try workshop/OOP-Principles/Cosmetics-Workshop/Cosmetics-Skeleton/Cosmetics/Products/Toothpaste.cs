@@ -25,7 +25,7 @@ namespace Cosmetics.Products
         public string Ingredients => ingredients;
         public override string Print()
         {
-            return $"{Brand} {Name}\r\n # Price: ${Price}\r\n # Gender: {Gender}\r\n # Ingredients: {ingredients}\r\n ===";
+            return base.Print() + $" # Ingredients: {ingredients}\r\n ===";
         }
     }
 }

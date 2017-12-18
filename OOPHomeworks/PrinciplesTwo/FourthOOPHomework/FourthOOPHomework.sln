@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shape", "FourthOOPHomework\Shape.csproj", "{A9C1A83F-98BA-48E7-96C5-51B13224427C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank", "Bank\Bank.csproj", "{B24D4512-EAD8-4AE0-A84C-9D53896D17E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exception", "Exception\Exception.csproj", "{440E8C25-9BDB-4E2A-8A13-80AA19D3D233}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9C1A83F-98BA-48E7-96C5-51B13224427C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9C1A83F-98BA-48E7-96C5-51B13224427C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9C1A83F-98BA-48E7-96C5-51B13224427C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9C1A83F-98BA-48E7-96C5-51B13224427C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B24D4512-EAD8-4AE0-A84C-9D53896D17E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B24D4512-EAD8-4AE0-A84C-9D53896D17E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B24D4512-EAD8-4AE0-A84C-9D53896D17E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B24D4512-EAD8-4AE0-A84C-9D53896D17E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{440E8C25-9BDB-4E2A-8A13-80AA19D3D233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{440E8C25-9BDB-4E2A-8A13-80AA19D3D233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{440E8C25-9BDB-4E2A-8A13-80AA19D3D233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{440E8C25-9BDB-4E2A-8A13-80AA19D3D233}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CCB0007E-32C4-4A3F-9510-3C2553C5D990}
+	EndGlobalSection
+EndGlobal
