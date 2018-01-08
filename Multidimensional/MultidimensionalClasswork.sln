@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultidimensionalClasswork", "MultidimensionalClasswork\MultidimensionalClasswork.csproj", "{497FDC35-630E-424D-8D85-1164461FF6EE}"
 EndProject
@@ -12,6 +12,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zad4", "Zad4\Zad4.csproj", "{358BE507-39DE-4A65-8C66-D0623614D034}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zad5", "zad5\zad5.csproj", "{4E2F5EB1-06BD-4766-983A-DCC905FE2503}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DFSMatrix", "DFSMatrix\DFSMatrix.csproj", "{09443EB8-C6E2-4803-80DB-BE18BD4EB309}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DFS test", "DFS test\DFS test.csproj", "{9BC71B84-8199-4C91-B26E-4EB643CA589A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{4E2F5EB1-06BD-4766-983A-DCC905FE2503}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E2F5EB1-06BD-4766-983A-DCC905FE2503}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E2F5EB1-06BD-4766-983A-DCC905FE2503}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09443EB8-C6E2-4803-80DB-BE18BD4EB309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09443EB8-C6E2-4803-80DB-BE18BD4EB309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09443EB8-C6E2-4803-80DB-BE18BD4EB309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09443EB8-C6E2-4803-80DB-BE18BD4EB309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BC71B84-8199-4C91-B26E-4EB643CA589A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BC71B84-8199-4C91-B26E-4EB643CA589A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BC71B84-8199-4C91-B26E-4EB643CA589A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BC71B84-8199-4C91-B26E-4EB643CA589A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
