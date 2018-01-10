@@ -12,8 +12,9 @@ namespace DSARecursionHomework
         static void Main(string[] args)
         {
             int input = 2;
-            times = input;
-            SimulateLoops(input);
+            
+
+            SimulateLoops(0);
         }
         static void SimulateLoops(int n)
         {
