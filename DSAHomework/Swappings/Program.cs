@@ -15,6 +15,7 @@ namespace Swappings
             int firstInput = int.Parse(Console.ReadLine());
             int[] secondInput = Console.ReadLine().Split().Select(int.Parse).ToArray();
             LinkedList<int> storage = new LinkedList<int>();
+            
 
             // List<string> stringList = new List<string>();
 
