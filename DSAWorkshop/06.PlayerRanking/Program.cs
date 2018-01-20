@@ -8,7 +8,7 @@ namespace _06.PlayerRanking
 {
     public class Player : IComparable<Player>
     {
-        public Player(string name, string type, byte age)
+        public Player(string name, string type, int age)
         {
             this.Name = name;
             this.Type = type;
@@ -17,7 +17,7 @@ namespace _06.PlayerRanking
 
         public string Name { get; set; }
         public string Type { get; set; }
-        public byte Age { get; set; }
+        public int Age { get; set; }
 
         public int CompareTo(Player second)
         {
@@ -29,7 +29,7 @@ namespace _06.PlayerRanking
             {
                 return -1;
             }
-            else
+            else if (this.Name.CompareTo(second.Name) == 0)
             {
                 if (this.Age > second.Age)
                 {
@@ -39,13 +39,13 @@ namespace _06.PlayerRanking
                 {
                     return 1;
                 }
-                else
+                else if (this.Age == second.Age)
                 {
                     return 0;
                 }
             }
 
-
+            return 0;
         }
     }
 
@@ -54,15 +54,14 @@ namespace _06.PlayerRanking
         static void Main(string[] args)
         {
             BigList<Player> rankList = new BigList<Player>();
-            Dictionary<string, OrderedBag<Player>> playersByTypes = new Dictionary<string, OrderedBag<Player>>();
-            
-        
+            Dictionary<string, OrderedSet<Player>> playersByTypes = new Dictionary<string, OrderedSet<Player>>();
+            StringBuilder result = new StringBuilder();
 
             string[] command = Console.ReadLine().Split();
 
             string name = string.Empty;
             string type = string.Empty;
-            byte age = new byte();
+            int age = new int();
             int position = new int();
 
             while (command[0] != "end")
@@ -72,45 +71,61 @@ namespace _06.PlayerRanking
                     case "add":
                         name = command[1];
                         type = command[2];
-                        age = byte.Parse(command[3]);
+                        age = int.Parse(command[3]);
                         position = int.Parse(command[4]);
+
+                        Player toAdd = new Player(name, type, age);
+
 
                         if (playersByTypes.ContainsKey(type))
                         {
-                            playersByTypes[type].Add(new Player(name, type, age));
-                            if (playersByTypes[type].Count > 5)
+                            if (playersByTypes[type].Count >= 5)
                             {
-                                playersByTypes[type].RemoveLast();
+                                var lastPlayer = playersByTypes[type][4];
 
+                                if (lastPlayer.CompareTo(toAdd) > 0)
+                                {
+                                    playersByTypes[type].RemoveLast();
+                                    playersByTypes[type].Add(toAdd);
+                                }
+                            }
+                            else
+                            {
+                                playersByTypes[type].Add(toAdd);
                             }
                         }
                         else
                         {
-                            playersByTypes.Add(type, new OrderedBag<Player>() { new Player(name, type, age)  });
-                           
+                            playersByTypes.Add(type, new OrderedSet<Player>());
+                            playersByTypes[type].Add(toAdd);
                         }
 
-                       
+                        //if (playersByTypes[type].Count > 5)
+                        //{
+                        //    playersByTypes[type].RemoveLast();
+                        //}
 
-                        rankList.Insert(position - 1, new Player(name, type, age));
 
-                        Console.WriteLine($"Added player {name} to position {position}");
+                        rankList.Insert(position - 1, toAdd);
+
+
+                        result.AppendLine(string.Format("Added player {0} to position {1}", name, position));
+
                         break;
                     case "find":
                         type = command[1];
 
                         StringBuilder sb = new StringBuilder();
+                        result.Append(string.Format("Type {0}: ", type));
 
-                        Console.Write("Type {0}: ", type);
                         if (playersByTypes.ContainsKey(type))
                         {
-                        foreach (var unit in playersByTypes[type])
-                        {
-                            sb.Append(string.Format($"{unit.Name}({unit.Age}); "));
+                            foreach (var unit in playersByTypes[type])
+                            {
+                                sb.Append(string.Format("{0}({1}); ", unit.Name, unit.Age));
+                            }
                         }
-                        Console.Write(sb.ToString().TrimEnd(';', ' '));
-                        }
-                        Console.WriteLine();
+                        result.AppendLine(string.Format(sb.ToString().TrimEnd(' ', ';')));
 
                         break;
                     case "ranklist":
@@ -119,19 +134,22 @@ namespace _06.PlayerRanking
 
                         sb = new StringBuilder();
 
-                        for (int s = start - 1; s < end; s++)
-                        {
-                            sb.Append(string.Format($"{s + 1}. { rankList[s].Name}({rankList[s].Age}); "));
+                        var range = rankList.Range(start - 1, end - start + 1);
 
+                        for (int s = 0; s < range.Count; s++)
+                        {
+                            sb.Append(string.Format("{0}. {1}({2}); ", start + s, range[s].Name, range[s].Age));
                         }
-                        Console.WriteLine(sb.ToString().TrimEnd(';', ' '));
+
+                        result.AppendLine(string.Format(sb.ToString().TrimEnd(' ', ';')));
 
                         break;
                 }
+
                 command = Console.ReadLine().Split();
             }
 
-
+            Console.Write(result.ToString());
         }
     }
 }
