@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace MessageInABottle
 {
+
+
     class Program
     {
+
         static string currentLetter = "no";
         static int currentDigit = -1;
         static string currentAnswerSequance = "-2";
@@ -47,7 +50,7 @@ namespace MessageInABottle
 
 
             for (int i = 1; i < input.Length; i++)
-            { 
+            {
 
                 for (int j = i; j < input.Length; j++)
                 {
@@ -55,11 +58,41 @@ namespace MessageInABottle
                 }
             }
 
-
-            foreach (var item in dict)
+            string codeRdy = string.Empty;
+            List<string> answers = new List<string>();
+            Magic(input, dict, answers, codeRdy);
+            Console.WriteLine(answers.Count());
+            foreach (var item in answers)
             {
                 Console.WriteLine(item);
             }
+
+
+
         }
+        public static void Magic(string code, Dictionary<int, string> dict, List<string> answers, string currentMsg)
+        {
+
+
+            if (code.Length <= 0)
+            {
+                answers.Add(currentMsg);
+                return;
+            }
+
+            foreach (var item in dict)
+            {
+                if (code.StartsWith(item.Key.ToString()))
+                {
+                    currentMsg += item.Value;
+                    Magic(code.Substring(item.Key.ToString().Length), dict, answers, currentMsg);
+                    currentMsg = currentMsg.Substring(item.Value.Length);
+                }
+            }
+
+
+
+        }
+
     }
 }

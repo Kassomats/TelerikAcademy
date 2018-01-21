@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.1RingsOfTheAcademy", "10
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.Swapping", "11.Swapping\11.Swapping.csproj", "{B3B5C5A9-ABC4-4168-878D-AB2B2A8E9E21}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.1(solution)MessagesInBottle", "02.1(solution)MessagesInBottle\02.1(solution)MessagesInBottle.csproj", "{794CCEE8-700C-407F-B8E3-2228C87F58F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{B3B5C5A9-ABC4-4168-878D-AB2B2A8E9E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3B5C5A9-ABC4-4168-878D-AB2B2A8E9E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3B5C5A9-ABC4-4168-878D-AB2B2A8E9E21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{794CCEE8-700C-407F-B8E3-2228C87F58F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{794CCEE8-700C-407F-B8E3-2228C87F58F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{794CCEE8-700C-407F-B8E3-2228C87F58F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{794CCEE8-700C-407F-B8E3-2228C87F58F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

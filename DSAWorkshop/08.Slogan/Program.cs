@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,31 +8,64 @@ namespace CokiSkoki
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            int input = int.Parse(Console.ReadLine());
-            int[] buildings = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            int[] jumps = new int[buildings.Length];
-            
-            for (int i = buildings.Length - 1; i >= 0; i--)
+            int numbers = int.Parse(Console.ReadLine());
+            for (int i = 0; i < numbers; i++)
             {
-                jumps[i] = 1 + CheckNextBuildings(i, buildings, jumps);
-            }
+                string[] words = Console.ReadLine().Split();
+                string cipher = Console.ReadLine();
 
-            Console.WriteLine(jumps.Max());
-            Console.WriteLine(string.Join(" ", jumps));
-        }
+                StringBuilder currentAnswer = new StringBuilder();
+                List<string> result = new List<string>();
+                HashSet<string> imposs = new HashSet<string>();
+                Decode(cipher, words, currentAnswer, result,imposs);
 
-        private static int CheckNextBuildings(int i, int[] buildings, int[] jumps)
-        {
-            for (int j = i + 1; j < buildings.Length; j++)
-            {
-                if (buildings[i] < buildings[j])
+                if (result.Count == 0)
                 {
-                    return jumps[j];
+                    Console.WriteLine("NOT VALID");
+                }
+                foreach (var item in result)
+                {
+                    Console.WriteLine(item.TrimEnd());
                 }
             }
-            return -1;
+
+        }
+        public static void Decode(string cipher, string[] words,
+            StringBuilder currentAnswer, List<string> result, HashSet<string> imposs)
+        {
+
+            if (cipher.Length == 0)
+            {
+                result.Add(currentAnswer.ToString());
+
+                return;
+            }
+            if (result.Count > 0)
+            {
+                return;
+            }
+            if (imposs.Contains(cipher))
+            {
+                return;
+            }
+
+            foreach (var item in words)
+            {
+                string test = item;
+                if (cipher.StartsWith(item))
+                {
+                    currentAnswer.Append(item + " ");
+                    test = string.Empty;
+                    string restOfMessage = cipher.Substring(item.Length);
+                    Decode(restOfMessage, words, currentAnswer, result, imposs);
+
+                    currentAnswer.Length -= item.Length + 1;
+                }
+            }
+            imposs.Add(cipher);
+            return;
         }
     }
 }
