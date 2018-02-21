@@ -6,7 +6,8 @@ using Wintellect.PowerCollections;
 
 namespace _06.PlayerRanking
 {
-    public class Player : IComparable<Player>
+    public class Player : 
+
     {
         public Player(string name, string type, int age)
         {

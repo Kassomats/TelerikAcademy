@@ -1,10 +1,11 @@
 ﻿using Bytes2you.Validation;
 using Cosmetics.Common;
+using Cosmetics.Contracts;
 using System;
 
 namespace Cosmetics.Products
 {
-    public class Product
+    public class Product:IProduct
     {
         private readonly decimal price;
         private readonly string name;

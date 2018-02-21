@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Contracts\ICommand.cs" />
     <Compile Include="Contracts\IEngine.cs" />
+    <Compile Include="Contracts\ICosmeticsFactory.cs" />
     <Compile Include="Engine\Command.cs" />
     <Compile Include="Engine\CosmeticsEngine.cs" />
     <Compile Include="Engine\CosmeticsFactory.cs" />

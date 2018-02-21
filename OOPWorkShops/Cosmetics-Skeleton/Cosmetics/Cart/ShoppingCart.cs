@@ -1,4 +1,5 @@
 ﻿using Bytes2you.Validation;
+using Cosmetics.Contracts;
 using Cosmetics.Products;
 using System;
 using System.Collections.Generic;
@@ -6,22 +7,22 @@ using System.Linq;
 
 namespace Cosmetics.Cart
 {
-    public class ShoppingCart
+    public class ShoppingCart:IShoppingCart
     {
-        private readonly ICollection<Product> productList;
+        private readonly ICollection<IProduct> productList;
 
         public ShoppingCart()
         {
-            this.productList = new List<Product>();
+            this.productList = new List<IProduct>();
         }
 
-        public ICollection<Product> ProductList
+        public ICollection<IProduct> ProductList
         {
             get { return this.productList; }
            
         }
 
-        public void AddProduct(Product product)
+        public void AddProduct(IProduct product)
         {
             if (product == null)
             {
@@ -30,13 +31,13 @@ namespace Cosmetics.Cart
             this.productList.Add(product);
         }
 
-        public void RemoveProduct(Product product)
+        public void RemoveProduct(IProduct product)
         {
             Guard.WhenArgument(product, "does exist").IsNull().Throw();
             productList.Remove(product);
         }
 
-        public bool ContainsProduct(Product product)
+        public bool ContainsProduct(IProduct product)
         {
             Guard.WhenArgument(product, "does exist").IsNull().Throw();
 

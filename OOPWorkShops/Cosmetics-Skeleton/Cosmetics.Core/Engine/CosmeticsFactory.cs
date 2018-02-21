@@ -1,18 +1,20 @@
 ﻿using Cosmetics.Cart;
 using Cosmetics.Common;
+using Cosmetics.Contracts;
+using Cosmetics.Core.Contracts;
 using Cosmetics.Products;
 using System;
 
 namespace Cosmetics.Core.Engine
 {
-    public class CosmeticsFactory
+    public class CosmeticsFactory: ICosmeticsFactory
     {
-        public Category CreateCategory(string name)
+        public ICategory CreateCategory(string name)
         {
             return new Category(name);
         }
 
-        public Product CreateProduct(string name, string brand, decimal price, string gender)
+        public IProduct CreateProduct(string name, string brand, decimal price, string gender)
         {
 
 
@@ -21,7 +23,7 @@ namespace Cosmetics.Core.Engine
             return new Product(name, brand, price, MyStatus);
         }
 
-        public ShoppingCart ShoppingCart()
+        public IShoppingCart ShoppingCart()
         {
             return new ShoppingCart();
         }

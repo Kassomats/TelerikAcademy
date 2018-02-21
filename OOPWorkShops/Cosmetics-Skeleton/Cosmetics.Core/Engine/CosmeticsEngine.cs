@@ -1,10 +1,16 @@
 ﻿using Cosmetics.Cart;
+using Cosmetics.Contracts;
 using Cosmetics.Core.Contracts;
 using Cosmetics.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Runtime.Serialization;
+using System.Security;
 
 namespace Cosmetics.Core.Engine
 {
@@ -26,28 +32,35 @@ namespace Cosmetics.Core.Engine
         private const string InvalidGenderType = "Invalid gender type!";
         private const string InvalidUsageType = "Invalid usage type!";
 
-        private static readonly CosmeticsEngine SingleInstance = new CosmeticsEngine();
 
-        private readonly CosmeticsFactory factory;
-        private readonly ShoppingCart shoppingCart;
-        private readonly IDictionary<string, Category> categories;
-        private readonly IDictionary<string, Product> products;
 
-        private CosmeticsEngine()
+        private readonly ICosmeticsFactory factory;
+        private readonly IShoppingCart shoppingCart;
+        private readonly IDictionary<string, ICategory> categories;
+        private readonly IDictionary<string, IProduct> products;
+
+        public CosmeticsEngine
+            (
+            ICosmeticsFactory fact,
+            IShoppingCart cart,
+
+            IDictionary<string, ICategory> categ,
+            IDictionary<string, IProduct> products
+            )
         {
-            this.factory = new CosmeticsFactory();
-            this.shoppingCart = new ShoppingCart();
-            this.categories = new Dictionary<string, Category>();
-            this.products = new Dictionary<string, Product>();
+            this.factory = fact;
+            this.shoppingCart = cart;
+            this.categories = categ;   //categ;
+            this.products = products;   //products;
         }
 
-        public static CosmeticsEngine Instance
-        {
-            get
-            {
-                return SingleInstance;
-            }
-        }
+        //public static CosmeticsEngine Instance
+        //{
+        //    get
+        //    {
+        //        return SingleInstance;
+        //    }
+        //}
 
         public void Start()
         {
