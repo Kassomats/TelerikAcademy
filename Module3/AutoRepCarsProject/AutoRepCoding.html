@@ -2,64 +2,70 @@
 <html>
   <head>
     <title>AutoShopRep</title>
-    <style>
-   #wrapper {
-    /*margin-top:0%;*/ 
-    border: 1px solid blue;
-}
-#menu {
-  background-color: green;
-    display: inline-block; 
-    /* widows: initial; */
-    /* background-color: green; */
-    height:43em;
-    width: 10em;
-   vertical-align: top;
-    border: 1px solid red;
-    
-}
-#theInfo {
-    display: inline-block;
-    width:auto;
-    height:auto;
-    border: 1px solid green;
-}
-.menu-item{
-    border:7px solid black;
-    margin: 2em;
-    vertical-align:middle; 
-    text-align:center;
-}
-    /*.menu-item {background-color: green;width: 25em;width: 20em;height: 20em}*/
-    </style>
+
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" type="text/css" href="./CSS/martoCSS.css">
+
+        <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+        <script src='lib/jquery.min.js'></script>
+        <script src='lib/moment.min.js'></script>
+        <script src='fullcalendar/fullcalendar.js'></script>
+
+<script>
+    $(document).ready(function() {
+
+// page is now ready, initialize the calendar...
+
+$('#calendar').fullCalendar({
+    // put your options and callbacks here
+})
+
+});
+</script>
+
   </head>
   <body>
+      
       <div id="wrapper"> 
             <div id = "menu">
                 <div id="calendar" class ="menu-item">
-                        <img src="calendar.jpg" />
+                        <img src="./Pictures/calendar.jpg" />
                 </div>
 
                 <div id="clients" class ="menu-item">
-                    <img src="clients.jpg" />
+                    <img src="./Pictures/clients.jpg" />
                 </div>
 
                 <div id="mechanics" class ="menu-item">
-                    <img src="mechanics.jpg"/>
+                    <img src="./Pictures/mechanics.jpg"/>
                 </div>
 
                 <div id="feedback" class= "menu-item">
-                    <img src="feedback.jpg"  />
+                    <img src="./Pictures/feedback.jpg"  />
                 </div>
 
                 <div id="about" class ="menu-item">
-                    <img src="about.jpg" />
+                    <img src="./Pictures/about.jpg" />
                 </div>
             </div>
-        <div id="theInfo">
-                <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=vu0m0a1hl8vg9kke0s05hqs9p4%40group.calendar.google.com&amp;color=%238D6F47&amp;ctz=Europe%2FSofia" style="border-width:0" width="750" height="675" frameborder="0" scrolling="no"></iframe>
-        </div>
+
+            <div id='calendar'>
+
+            </div>
+              
+            <!-- <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=vu0m0a1hl8vg9kke0s05hqs9p4%40group.calendar.google.com&amp;color=%238D6F47&amp;ctz=Europe%2FSofia" style="border-width:0" width="700" height="600" frameborder="0" scrolling="no"></iframe> -->
+     
+        
     </div>
-    
+        <script>
+                $( "#calendar" ).click(function() {
+              
+                console.log("clicked !!");
+                });
+        </script>
   </body>
 </html>
