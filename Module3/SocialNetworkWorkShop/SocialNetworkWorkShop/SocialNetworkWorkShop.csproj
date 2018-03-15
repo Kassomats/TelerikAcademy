@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B8143B67-3E13-4184-97C4-5D2BD1BA3D53}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SocialNetworkWorkShop</RootNamespace>
+    <AssemblyName>SocialNetworkWorkShop</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\201803131125101_Initial.cs" />
+    <Compile Include="Migrations\201803131125101_Initial.Designer.cs">
+      <DependentUpon>201803131125101_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803131132461_Initial2.cs" />
+    <Compile Include="Migrations\201803131132461_Initial2.Designer.cs">
+      <DependentUpon>201803131132461_Initial2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803131142463_Initial3.cs" />
+    <Compile Include="Migrations\201803131142463_Initial3.Designer.cs">
+      <DependentUpon>201803131142463_Initial3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803131154045_Added better connections.cs" />
+    <Compile Include="Migrations\201803131154045_Added better connections.Designer.cs">
+      <DependentUpon>201803131154045_Added better connections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803131201164_Added better connections between posts and users.cs" />
+    <Compile Include="Migrations\201803131201164_Added better connections between posts and users.Designer.cs">
+      <DependentUpon>201803131201164_Added better connections between posts and users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803131213043_Added better connections between posts and users 2.cs" />
+    <Compile Include="Migrations\201803131213043_Added better connections between posts and users 2.Designer.cs">
+      <DependentUpon>201803131213043_Added better connections between posts and users 2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803131254229_Updating users.cs" />
+    <Compile Include="Migrations\201803131254229_Updating users.Designer.cs">
+      <DependentUpon>201803131254229_Updating users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803131304284_Updating users again.cs" />
+    <Compile Include="Migrations\201803131304284_Updating users again.Designer.cs">
+      <DependentUpon>201803131304284_Updating users again.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803131319316_Trying to remove recursion.cs" />
+    <Compile Include="Migrations\201803131319316_Trying to remove recursion.Designer.cs">
+      <DependentUpon>201803131319316_Trying to remove recursion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SocialNetworkContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803131125101_Initial.resx">
+      <DependentUpon>201803131125101_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803131132461_Initial2.resx">
+      <DependentUpon>201803131132461_Initial2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803131142463_Initial3.resx">
+      <DependentUpon>201803131142463_Initial3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803131154045_Added better connections.resx">
+      <DependentUpon>201803131154045_Added better connections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803131201164_Added better connections between posts and users.resx">
+      <DependentUpon>201803131201164_Added better connections between posts and users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803131213043_Added better connections between posts and users 2.resx">
+      <DependentUpon>201803131213043_Added better connections between posts and users 2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803131254229_Updating users.resx">
+      <DependentUpon>201803131254229_Updating users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803131304284_Updating users again.resx">
+      <DependentUpon>201803131304284_Updating users again.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803131319316_Trying to remove recursion.resx">
+      <DependentUpon>201803131319316_Trying to remove recursion.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SN.Database\SN.Database.csproj">
+      <Project>{0ccb239d-4ed9-4a8d-a18c-8d3e16681c50}</Project>
+      <Name>SN.Database</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
