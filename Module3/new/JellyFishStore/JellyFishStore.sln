@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JellyFishStore.Client", "JellyFishStore\JellyFishStore.Client.csproj", "{DC87FF49-23E0-451D-AD18-F0B9A2585375}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JFS.DataBase", "JFS.DataBase\JFS.DataBase.csproj", "{B21CEDE0-27C9-4364-82C4-66AAA6709C98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC87FF49-23E0-451D-AD18-F0B9A2585375}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC87FF49-23E0-451D-AD18-F0B9A2585375}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC87FF49-23E0-451D-AD18-F0B9A2585375}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC87FF49-23E0-451D-AD18-F0B9A2585375}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B21CEDE0-27C9-4364-82C4-66AAA6709C98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B21CEDE0-27C9-4364-82C4-66AAA6709C98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B21CEDE0-27C9-4364-82C4-66AAA6709C98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B21CEDE0-27C9-4364-82C4-66AAA6709C98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D10D0DE-FABA-4E5D-99D6-6BAD4A11831A}
+	EndGlobalSection
+EndGlobal
