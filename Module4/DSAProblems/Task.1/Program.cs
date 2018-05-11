@@ -27,6 +27,7 @@ namespace Task._1
         }
         
     }
+    
     public class MyBox<T>
     {
         private readonly T name;

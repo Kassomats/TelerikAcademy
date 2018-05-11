@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.GirlsWildSecond", "06.Gi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.GirlsGoneWildLast", "06.GirlsGoneWildLast\06.GirlsGoneWildLast.csproj", "{ABE7AE48-2E3E-4406-ACD3-CC75C768C6FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingAlgorythms", "SortingAlgorythms\SortingAlgorythms.csproj", "{EA655FEE-BA65-4D2D-8DDE-A1AFAFD8D0F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{ABE7AE48-2E3E-4406-ACD3-CC75C768C6FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABE7AE48-2E3E-4406-ACD3-CC75C768C6FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABE7AE48-2E3E-4406-ACD3-CC75C768C6FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA655FEE-BA65-4D2D-8DDE-A1AFAFD8D0F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA655FEE-BA65-4D2D-8DDE-A1AFAFD8D0F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA655FEE-BA65-4D2D-8DDE-A1AFAFD8D0F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA655FEE-BA65-4D2D-8DDE-A1AFAFD8D0F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
